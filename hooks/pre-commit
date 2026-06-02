@@ -1,0 +1,8 @@
+#!/bin/sh
+# WNAC data-guard — refuse to commit private/financial files (even via `git add -f`).
+blocked=$(git diff --cached --name-only | grep -iE '(^|/)(budget\.config|data|insights|overrides|dashboard|PRD|FEATURES|STATUS)\.(json|html|md)$|\.(qfx|ofx|csv|png|jpe?g)$|(^|/)(statements|refs)/' | grep -vE '\.example\.json$')
+if [ -n "$blocked" ]; then
+  echo "WNAC data-guard: refusing to commit private/data files:" >&2
+  printf '  - %s\n' $blocked >&2
+  exit 1
+fi

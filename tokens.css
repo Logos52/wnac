@@ -1,0 +1,71 @@
+/* WNAC design tokens — reverse-engineered from a real Copilot Money dashboard screenshot
+ * (2720x1680 palette PNG, pixel-sampled 2026-06-01). Dark is the PRIMARY theme — it is
+ * Copilot's signature look. [exact] = sampled directly; [approx] = derived from the hue
+ * (thin foreground text too small to sample cleanly) or interpolated; refine in-build.
+ * Light theme: TODO (derive later). */
+
+:root {
+  /* ---- surfaces (all [exact], by area) ---- */
+  --surface-base:     #000610; /* page background — darkest navy-black */
+  --surface-sidebar:  #030C1B; /* left nav */
+  --surface-card:     #010E21; /* cards (covers ~54% of the screen) */
+  --surface-card-alt: #08182E; /* hover / nested / inset rows */
+  --border-subtle:    #0D1F38; /* card borders, dividers */
+  --border-strong:    #172842; /* emphasized borders */
+
+  /* ---- text ---- */
+  --text-primary:   #DAE5F3; /* [exact] cool white */
+  --text-secondary: #9AB0CF; /* [exact] muted blue-gray */
+  --text-muted:     #5B6E8C; /* [approx] dim labels */
+
+  /* ---- accent ---- */
+  --accent:        #5089D8; /* [exact] active nav pill + links */
+  --accent-bright: #66AAF7; /* [exact] data blue — assets, net-worth line */
+  --accent-ink:    #FFFFFF; /* text on filled accent */
+
+  /* ---- pace scale (THE core semantic; [exact] from category bars) ---- */
+  --pace-under:  #00BB36; /* green  — at/under ideal burn */
+  --pace-slight: #F5A623; /* [approx] light amber — slightly over pace */
+  --pace-over:   #ED8001; /* [exact] amber-orange — well over pace */
+  --pace-budget: #F3241A; /* [exact] red — over full-month budget */
+  --debt-coral:  #F58557; /* [exact] debts line / pay-down */
+
+  /* ---- chips: dark-tinted bg + vivid uppercase label (Copilot category tags) ---- */
+  --chip-green-bg:   #032025; --chip-green-fg:   #0AA947; /* [exact] */
+  --chip-red-bg:     #1D1825; --chip-red-fg:     #F3241A; /* bg[exact] */
+  --chip-blue-bg:    #032A3B; --chip-blue-fg:    #46C5E6; /* fg[approx] subscriptions */
+  --chip-purple-bg:  #291A47; --chip-purple-fg:  #B36EF5; /* [exact] entertainment (caret hue) */
+  --chip-magenta-bg: #2B1940; --chip-magenta-fg: #F34AD8; /* [exact] shops */
+  --chip-orange-bg:  #2A1B10; --chip-orange-fg:  #E66A37; /* fg[exact] transport/restaurants */
+
+  /* ---- categorical ramp (spending breakdown / donut) ---- */
+  --cat-1:#66AAF7; --cat-2:#00BB36; --cat-3:#ED8001; --cat-4:#F3241A;
+  --cat-5:#A98BF0; --cat-6:#F34AD8; --cat-7:#46C5E6; --cat-8:#F5C84B;
+
+  /* ---- components ([exact] from screenshot) ---- */
+  --row-selected-bg: #071931; /* highlighted/selected transaction row */
+  --checkbox-stroke: #20324C; /* review checkbox ring */
+  --bar-track:       #172842; /* unfilled progress-bar track */
+  --pill-active-bg:  #0D1F38; /* active range pill (e.g. YTD) */
+  --btn-subtle-bg:   #08182E; /* "Mark reviewed"-style subtle button */
+  --callout-green:   #0AC34D; /* solid "$100 under" pill, white text */
+  /* count-badge + caret hues: badge bg = dark hue tint, caret/number = vivid hue */
+  --hue-purple:#B36EF5; --hue-purple-bg:#1F2045; /* Food & Drink */
+  --hue-green: #00BB36; --hue-green-bg: #0D2B27; /* Necessities */
+  --hue-orange:#E66A37; --hue-orange-bg:#291E26; /* Shopping */
+  --hue-blue:  #409DF8; --hue-blue-bg:  #0D2749; /* Fun */
+
+  /* ---- geometry & motion ---- */
+  --radius-card: 20px;
+  --radius-pill: 999px;
+  --gap-grid:    20px;
+  --shadow-card: inset 0 1px 0 rgba(255,255,255,.02), 0 8px 24px rgba(0,0,0,.35);
+  --ease-spring:   cubic-bezier(.34, 1.56, .64, 1);   /* dial fill / count-up overshoot */
+  --ease-standard: cubic-bezier(.4, 0, .2, 1);        /* transitions */
+  --dur-ring:  1100ms; /* ring/dial fill */
+  --dur-count:  900ms; /* number count-up */
+
+  /* ---- type ---- */
+  --font: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  /* numerals read heavy (700) and large; labels are 500; uppercase chips are 600 + tracked */
+}

@@ -1,0 +1,19 @@
+# WNAC — money is private. Never commit financial data.
+budget.config.json
+data.json
+insights.json
+dashboard.html
+overrides.json
+statements/
+refs/
+*.png
+*.jpg
+*.jpeg
+__pycache__/
+*.pyc
+.DS_Store
+
+# internal design/handoff docs — not part of the public method (carry personal context)
+STATUS.md
+PRD.md
+FEATURES.md

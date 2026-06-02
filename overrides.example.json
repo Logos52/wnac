@@ -1,0 +1,8 @@
+{
+  "_comment": "Copy to overrides.json (gitignored). Your private, reasoned merchant->category map. Substring match on lowercased payee; first match wins. Categories should match your taxonomy (Dining, Coffee, Groceries, Travel, Shopping, Clothing, Medical, Health, Entertainment, Subscriptions, Insurance, Transfer, Fees, Cash, Benefits, ...).",
+  "rules": [
+    {"match": "examplecoffee", "category": "Coffee"},
+    {"match": "examplemart",   "category": "Groceries"},
+    {"match": "exampleair",    "category": "Travel"}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "Copy to budget.config.json (gitignored) and fill in your real values. Nothing here is real.",
+  "income_monthly": 0,
+  "fixed_costs": { "Rent": 0, "Insurance": 0, "Subscriptions": 0 },
+  "goals": [
+    {
+      "type": "paydown",
+      "name": "Credit Card",
+      "account": "Credit Card",
+      "start_balance": 0,
+      "target": 0,
+      "monthly": 0,
+      "apr": null
+    }
+  ],
+  "high_confidence_threshold": 0.8,
+  "db_path": "~/path/to/your/Actual/Budget/db.sqlite",
+  "journal_path": "~/path/to/your/budget-journal.md",
+  "non_spend_categories": ["Transfer", "Starting Balance", "Income", "Benefits"]
+}
