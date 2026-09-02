@@ -1,3 +1,5 @@
+import os
+import sys
 #!/usr/bin/env python3
 """WNAC render (P1): data.json + insights.json + tokens.css -> self-contained dashboard.html.
 
@@ -9,6 +11,10 @@ import json, os, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 data = json.load(open(f"{HERE}/data.json"))
 ins  = json.load(open(f"{HERE}/insights.json"))
+# Staleness guard (PRD §stale; added 2026-09-02): data.json newer than insights.json means analyze.py was not re-run.
+STALE = os.path.getmtime(f"{HERE}/data.json") > os.path.getmtime(f"{HERE}/insights.json")
+if STALE:
+    print("WARNING: data.json is newer than insights.json — run analyze.py before render.py, or the dashboard shows stale analysis", file=sys.stderr)
 tokens = open(f"{HERE}/tokens.css").read()
 stamp = datetime.datetime.now().strftime("%b %d, %Y %H:%M")
 
@@ -376,6 +382,6 @@ html = (TEMPLATE
         .replace("/*INS*/", json.dumps(ins))
         .replace("/*CATHUE*/", json.dumps(CAT_HUE))
         .replace("/*JOURNAL*/", json.dumps(journal))
-        .replace("/*STAMP*/", stamp))
+        .replace("/*STAMP*/", stamp + (" — ANALYSIS OUT OF DATE: data.json is newer than insights.json, run analyze.py" if STALE else "")))
 open(f"{HERE}/dashboard.html", "w").write(html)
 print(f"wrote dashboard.html ({len(html):,} bytes) — open it in a browser")
