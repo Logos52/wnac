@@ -58,12 +58,12 @@
     {
       "rule": "R1",
       "file": "analyze.py",
-      "fingerprint": "369f8a0d"
+      "fingerprint": "df365d6f"
     },
     {
       "rule": "R1",
       "file": "brain.py",
-      "fingerprint": "2dee93de"
+      "fingerprint": "c9b0bcd8"
     },
     {
       "rule": "R1",
@@ -73,7 +73,7 @@
     {
       "rule": "R1",
       "file": "import.py",
-      "fingerprint": "f1064dcf"
+      "fingerprint": "8e48d845"
     },
     {
       "rule": "R1",
@@ -93,7 +93,7 @@
     {
       "rule": "R1",
       "file": "render.py",
-      "fingerprint": "8c4cb173"
+      "fingerprint": "e160e77b"
     },
     {
       "rule": "R1",
@@ -108,7 +108,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "e54840b3"
+      "fingerprint": "569bac65"
     },
     {
       "rule": "R1",
@@ -118,7 +118,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "c31d8300"
+      "fingerprint": "5378b00a"
     },
     {
       "rule": "R1",
@@ -158,7 +158,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "0fc7d1ec"
+      "fingerprint": "fc7d1ec"
     },
     {
       "rule": "R1",
@@ -178,7 +178,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "d394615d"
+      "fingerprint": "90b2d4df"
     },
     {
       "rule": "R1",
@@ -193,22 +193,22 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "5da506cf"
+      "fingerprint": "a084e535"
     },
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "a5ad55c1"
+      "fingerprint": "367c670b"
     },
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "02c91753"
+      "fingerprint": "a88581ed"
     },
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "ca0a2faa"
+      "fingerprint": "8c110ebc"
     },
     {
       "rule": "R1",
@@ -243,7 +243,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "0d570bfb"
+      "fingerprint": "d570bfb"
     },
     {
       "rule": "R1",
@@ -268,7 +268,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "04861b0c"
+      "fingerprint": "4861b0c"
     },
     {
       "rule": "R1",
@@ -303,7 +303,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "055c035e"
+      "fingerprint": "55c035e"
     },
     {
       "rule": "R1",
@@ -328,7 +328,7 @@
     {
       "rule": "R1",
       "file": "tokens.css",
-      "fingerprint": "0098e2b2"
+      "fingerprint": "98e2b2"
     },
     {
       "rule": "R1",
@@ -373,27 +373,27 @@
     {
       "rule": "R16",
       "file": "AGENTS.md",
-      "fingerprint": "150136fe"
+      "fingerprint": "53f51cb0"
     },
     {
       "rule": "R16",
       "file": "AGENTS.md",
-      "fingerprint": "f38c41a4"
+      "fingerprint": "a9582fba"
     },
     {
       "rule": "R16",
       "file": "AGENTS.md",
-      "fingerprint": "6dac81f0"
+      "fingerprint": "e7166a2e"
     },
     {
       "rule": "R16",
       "file": "AGENTS.md",
-      "fingerprint": "2846facf"
+      "fingerprint": "e9e2d597"
     },
     {
       "rule": "R16",
       "file": "README.md",
-      "fingerprint": "5e5ae207"
+      "fingerprint": "e740484d"
     },
     {
       "rule": "R16",
@@ -403,12 +403,12 @@
     {
       "rule": "R16",
       "file": "README.md",
-      "fingerprint": "9a1161d9"
+      "fingerprint": "3f16fae9"
     },
     {
       "rule": "R16",
       "file": "README.md",
-      "fingerprint": "9a1161d9"
+      "fingerprint": "3f16fae9"
     },
     {
       "rule": "R0",
@@ -418,47 +418,47 @@
     {
       "rule": "R4",
       "file": "/home/runner/work/wnac/wnac/analyze.py",
-      "fingerprint": "f28210c8"
+      "fingerprint": "dee59bc8"
     },
     {
       "rule": "R4",
       "file": "/home/runner/work/wnac/wnac/analyze.py",
-      "fingerprint": "18585de6"
+      "fingerprint": "dee59bc8"
     },
     {
       "rule": "R4",
       "file": "/home/runner/work/wnac/wnac/analyze.py",
-      "fingerprint": "079ea528"
+      "fingerprint": "dee59bc8"
     },
     {
       "rule": "R4",
       "file": "/home/runner/work/wnac/wnac/import.py",
-      "fingerprint": "80ec942c"
+      "fingerprint": "dee59bc8"
     },
     {
       "rule": "R4",
       "file": "/home/runner/work/wnac/wnac/import.py",
-      "fingerprint": "1dd1a51a"
+      "fingerprint": "dee59bc8"
     },
     {
       "rule": "R4",
       "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "99b233eb"
+      "fingerprint": "dee59bc8"
     },
     {
       "rule": "R2",
       "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "d1f72c7e"
+      "fingerprint": "2ab478e6"
     },
     {
       "rule": "R2",
       "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "d1f72c7e"
+      "fingerprint": "203fa458"
     },
     {
       "rule": "R4",
       "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "45efd8e7"
+      "fingerprint": "dee59bc8"
     }
   ]
 }
