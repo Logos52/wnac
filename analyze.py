@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# kit fail proof
 """WNAC analyze (P1): data.json + budget.config.json + brain -> insights.json.
 
 The only nondeterministic stage. P1 uses the offline stub brain (no API key).
