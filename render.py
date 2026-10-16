@@ -1,6 +1,5 @@
 import os
 import sys
-#!/usr/bin/env python3
 """WNAC render (P1): data.json + insights.json + tokens.css -> self-contained dashboard.html.
 
 Inlines everything (tokens, data, insights) into ONE file so it opens by double-click on file://
@@ -11,14 +10,12 @@ import json, os, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 data = json.load(open(f"{HERE}/data.json"))
 ins  = json.load(open(f"{HERE}/insights.json"))
-# Staleness guard (PRD §stale; added 2026-09-02): data.json newer than insights.json means analyze.py was not re-run.
 STALE = os.path.getmtime(f"{HERE}/data.json") > os.path.getmtime(f"{HERE}/insights.json")
 if STALE:
     print("WARNING: data.json is newer than insights.json — run analyze.py before render.py, or the dashboard shows stale analysis", file=sys.stderr)
 tokens = open(f"{HERE}/tokens.css").read()
 stamp = datetime.datetime.now().strftime("%b %d, %Y %H:%M")
 
-# ---- journal: optional local budget journal ($WNAC_JOURNAL or budget.config.json:"journal_path") ----
 import re as _re, html as _html
 def md2html(md):
     out, para, inlist = [], [], [False]
@@ -111,7 +108,6 @@ body{background:var(--surface-base);color:var(--text-primary);font-family:var(--
 .jbody p{margin:8px 0}
 """
 
-# category -> accent hue (from tokens)
 CAT_HUE = {
  "Dining":"--chip-orange-fg","Coffee":"--hue-orange","Groceries":"--pace-under",
  "Clothing":"--chip-magenta-fg","Shopping":"--accent-bright","Insurance":"--accent",
