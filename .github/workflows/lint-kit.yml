@@ -50,3 +50,5 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           exit "$status"
+      - name: Unpinned proof
+        run: pip install requests
