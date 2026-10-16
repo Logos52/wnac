@@ -8,7 +8,6 @@ Confidence-gating is applied downstream in analyze.py (auto-apply only >= thresh
 """
 import re
 
-# kit fail proof
 RULES = [
     (r"starting balance",                          "Starting Balance", 0.99),
     (r"interest|late fee|finance charge",          "Fees",             0.90),
