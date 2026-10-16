@@ -7,8 +7,6 @@ Declarative CSV/QFX adapters are the next import mode (see PRD §7.1). Determini
 import sqlite3, json, os, sys, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-# DB path is machine-specific and private — never commit it. Provide it via
-# $WNAC_DB or budget.config.json:"db_path" (gitignored; see budget.config.example.json).
 _cfg_path = os.path.join(HERE, "budget.config.json")
 _cfg = json.load(open(_cfg_path)) if os.path.exists(_cfg_path) else {}
 DB = os.path.expanduser(os.environ.get("WNAC_DB") or _cfg.get("db_path", ""))
@@ -18,7 +16,7 @@ if not DB or not os.path.exists(DB):
              'No path is committed — your finances stay local.')
 OUT = os.path.join(HERE, "data.json")
 
-def d2iso(d):                      # 20260531 -> "2026-05-31"
+def d2iso(d):
     d = int(d); return f"{d//10000:04d}-{(d//100)%100:02d}-{d%100:02d}"
 
 con = sqlite3.connect(f"file:{DB}?mode=ro", uri=True); cur = con.cursor()

@@ -8,8 +8,6 @@ Confidence-gating is applied downstream in analyze.py (auto-apply only >= thresh
 """
 import re
 
-# Generic, illustrative keyword rules (regex on payee, category, confidence) — first match wins.
-# Personal/merchant-specific categorizations live in overrides.json (gitignored; applied in analyze.py).
 RULES = [
     (r"starting balance",                          "Starting Balance", 0.99),
     (r"interest|late fee|finance charge",          "Fees",             0.90),
