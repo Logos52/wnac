@@ -1,0 +1,464 @@
+{
+  "entries": [
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "41e9c418"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "2539ca00"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "5fd418d8"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "da781ded"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "8be91cae"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "6d2d7fe2"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "a33e72d1"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "78c2c056"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "8db11a99"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "7fdd9ff7"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "d6fa463b"
+    },
+    {
+      "rule": "R1",
+      "file": "analyze.py",
+      "fingerprint": "369f8a0d"
+    },
+    {
+      "rule": "R1",
+      "file": "brain.py",
+      "fingerprint": "2dee93de"
+    },
+    {
+      "rule": "R1",
+      "file": "brain.py",
+      "fingerprint": "21b32e5f"
+    },
+    {
+      "rule": "R1",
+      "file": "import.py",
+      "fingerprint": "f1064dcf"
+    },
+    {
+      "rule": "R1",
+      "file": "import.py",
+      "fingerprint": "13db6244"
+    },
+    {
+      "rule": "R1",
+      "file": "import.py",
+      "fingerprint": "afa75688"
+    },
+    {
+      "rule": "R1",
+      "file": "render.py",
+      "fingerprint": "afeece3d"
+    },
+    {
+      "rule": "R1",
+      "file": "render.py",
+      "fingerprint": "8c4cb173"
+    },
+    {
+      "rule": "R1",
+      "file": "render.py",
+      "fingerprint": "c1f34eb5"
+    },
+    {
+      "rule": "R1",
+      "file": "render.py",
+      "fingerprint": "2489f776"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "e54840b3"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "6805c566"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "c31d8300"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "ed7fa506"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "66c5b178"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "7a3090e8"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "accb8ef2"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "4335a358"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "ffabb2a4"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "fe726552"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "0fc7d1ec"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "e50ea718"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "820d02fd"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "10af0a32"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "d394615d"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "af4fdada"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "72d830d7"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "5da506cf"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "a5ad55c1"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "02c91753"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "ca0a2faa"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "949a1c07"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "352dad43"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "ac408ee0"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "60b37313"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "97658a74"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "f6e8d4ab"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "0d570bfb"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "9c4864de"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "5313e25e"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "1fbc64c1"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "6db811e1"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "04861b0c"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "20110a81"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "6545135f"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "6fefe8a4"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "581ee83f"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "b6b82161"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "3ebcbaa2"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "055c035e"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "d427d562"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "5795fd9d"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "3189b443"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "c916d7a3"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "0098e2b2"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "331125d6"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "19b4de86"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "1c0a3b3f"
+    },
+    {
+      "rule": "R1",
+      "file": "tokens.css",
+      "fingerprint": "95c9e279"
+    },
+    {
+      "rule": "R2",
+      "file": "render.py",
+      "fingerprint": "682928d4"
+    },
+    {
+      "rule": "R8",
+      "file": "rules.json",
+      "fingerprint": "10f94bb4"
+    },
+    {
+      "rule": "R10",
+      "file": ".github/workflows/lint-kit.yml",
+      "fingerprint": "e48bceee"
+    },
+    {
+      "rule": "R0",
+      "file": "check:fixtures",
+      "fingerprint": "b88c6191"
+    },
+    {
+      "rule": "R16",
+      "file": "AGENTS.md",
+      "fingerprint": "150136fe"
+    },
+    {
+      "rule": "R16",
+      "file": "AGENTS.md",
+      "fingerprint": "f38c41a4"
+    },
+    {
+      "rule": "R16",
+      "file": "AGENTS.md",
+      "fingerprint": "6dac81f0"
+    },
+    {
+      "rule": "R16",
+      "file": "AGENTS.md",
+      "fingerprint": "2846facf"
+    },
+    {
+      "rule": "R16",
+      "file": "README.md",
+      "fingerprint": "5e5ae207"
+    },
+    {
+      "rule": "R16",
+      "file": "README.md",
+      "fingerprint": "8384d335"
+    },
+    {
+      "rule": "R16",
+      "file": "README.md",
+      "fingerprint": "9a1161d9"
+    },
+    {
+      "rule": "R16",
+      "file": "README.md",
+      "fingerprint": "9a1161d9"
+    },
+    {
+      "rule": "R0",
+      "file": "check:knip",
+      "fingerprint": "b00785c2"
+    },
+    {
+      "rule": "R4",
+      "file": "/home/runner/work/wnac/wnac/analyze.py",
+      "fingerprint": "f28210c8"
+    },
+    {
+      "rule": "R4",
+      "file": "/home/runner/work/wnac/wnac/analyze.py",
+      "fingerprint": "18585de6"
+    },
+    {
+      "rule": "R4",
+      "file": "/home/runner/work/wnac/wnac/analyze.py",
+      "fingerprint": "079ea528"
+    },
+    {
+      "rule": "R4",
+      "file": "/home/runner/work/wnac/wnac/import.py",
+      "fingerprint": "80ec942c"
+    },
+    {
+      "rule": "R4",
+      "file": "/home/runner/work/wnac/wnac/import.py",
+      "fingerprint": "1dd1a51a"
+    },
+    {
+      "rule": "R4",
+      "file": "/home/runner/work/wnac/wnac/render.py",
+      "fingerprint": "99b233eb"
+    },
+    {
+      "rule": "R2",
+      "file": "/home/runner/work/wnac/wnac/render.py",
+      "fingerprint": "d1f72c7e"
+    },
+    {
+      "rule": "R2",
+      "file": "/home/runner/work/wnac/wnac/render.py",
+      "fingerprint": "d1f72c7e"
+    },
+    {
+      "rule": "R4",
+      "file": "/home/runner/work/wnac/wnac/render.py",
+      "fingerprint": "45efd8e7"
+    }
+  ]
+}
