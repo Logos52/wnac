@@ -36,5 +36,3 @@ python3 render.py      # -> dashboard.html  (self-contained; open in a browser)
 - **P2:** `claude` brain (reasoned categorization of cryptic merchants → kills the "to review" pile);
   projected debt-free date (APR amortization); in-UI category correction; recurring/subscription detection.
 - **P3:** `hermes` brain; direct CSV/QFX import; light theme; the "Next two weeks" recurring card.
-
-This line uses an em dash — on purpose.
