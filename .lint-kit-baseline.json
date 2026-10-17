@@ -1,24 +1,9 @@
 {
   "entries": [
     {
-      "rule": "R2",
-      "file": "render.py",
-      "fingerprint": "2e166638"
-    },
-    {
-      "rule": "R8",
-      "file": "rules.json",
-      "fingerprint": "10f94bb4"
-    },
-    {
       "rule": "R10",
       "file": ".github/workflows/lint-kit.yml",
-      "fingerprint": "e48bceee"
-    },
-    {
-      "rule": "R0",
-      "file": "check:fixtures",
-      "fingerprint": "b88c6191"
+      "fingerprint": "790f4270"
     },
     {
       "rule": "R16",
@@ -43,7 +28,12 @@
     {
       "rule": "R16",
       "file": "README.md",
-      "fingerprint": "e740484d"
+      "fingerprint": "3f16fae9"
+    },
+    {
+      "rule": "R16",
+      "file": "README.md",
+      "fingerprint": "3f16fae9"
     },
     {
       "rule": "R16",
@@ -53,62 +43,62 @@
     {
       "rule": "R16",
       "file": "README.md",
-      "fingerprint": "3f16fae9"
-    },
-    {
-      "rule": "R16",
-      "file": "README.md",
-      "fingerprint": "3f16fae9"
-    },
-    {
-      "rule": "R0",
-      "file": "check:knip",
-      "fingerprint": "b00785c2"
-    },
-    {
-      "rule": "R4",
-      "file": "/home/runner/work/wnac/wnac/analyze.py",
-      "fingerprint": "dee59bc8"
-    },
-    {
-      "rule": "R4",
-      "file": "/home/runner/work/wnac/wnac/analyze.py",
-      "fingerprint": "dee59bc8"
-    },
-    {
-      "rule": "R4",
-      "file": "/home/runner/work/wnac/wnac/analyze.py",
-      "fingerprint": "dee59bc8"
-    },
-    {
-      "rule": "R4",
-      "file": "/home/runner/work/wnac/wnac/import.py",
-      "fingerprint": "dee59bc8"
-    },
-    {
-      "rule": "R4",
-      "file": "/home/runner/work/wnac/wnac/import.py",
-      "fingerprint": "dee59bc8"
-    },
-    {
-      "rule": "R4",
-      "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "dee59bc8"
+      "fingerprint": "e740484d"
     },
     {
       "rule": "R2",
-      "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "2ab478e6"
+      "file": "render.py",
+      "fingerprint": "2e166638"
     },
     {
       "rule": "R2",
-      "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "203fa458"
+      "file": "render.py",
+      "fingerprint": "d1f72c7e"
+    },
+    {
+      "rule": "R2",
+      "file": "render.py",
+      "fingerprint": "d1f72c7e"
     },
     {
       "rule": "R4",
-      "file": "/home/runner/work/wnac/wnac/render.py",
-      "fingerprint": "dee59bc8"
+      "file": "analyze.py",
+      "fingerprint": "18585de6"
+    },
+    {
+      "rule": "R4",
+      "file": "analyze.py",
+      "fingerprint": "79ea528"
+    },
+    {
+      "rule": "R4",
+      "file": "analyze.py",
+      "fingerprint": "f28210c8"
+    },
+    {
+      "rule": "R4",
+      "file": "import.py",
+      "fingerprint": "1dd1a51a"
+    },
+    {
+      "rule": "R4",
+      "file": "import.py",
+      "fingerprint": "80ec942c"
+    },
+    {
+      "rule": "R4",
+      "file": "render.py",
+      "fingerprint": "254569"
+    },
+    {
+      "rule": "R4",
+      "file": "render.py",
+      "fingerprint": "4a2f8ef9"
+    },
+    {
+      "rule": "R8",
+      "file": "rules.json",
+      "fingerprint": "10f94bb4"
     }
   ]
 }
