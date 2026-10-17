@@ -34,4 +34,3 @@ def categorize_one(payee):
 
 def categorize_and_narrate(data):
     return {"categories": {t["id"]: categorize_one(t["payee"]) for t in data["transactions"]}}
-    kit_fail_proof_unreachable = 1
