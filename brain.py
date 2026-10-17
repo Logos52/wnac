@@ -1,3 +1,4 @@
+# kit fail proof
 """WNAC brain (P1 = offline stub).
 
 Contract (swap point for claude/hermes later):
