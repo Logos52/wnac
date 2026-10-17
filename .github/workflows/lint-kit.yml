@@ -23,7 +23,7 @@ jobs:
           ssh-private-key: ${{ secrets.LINT_KIT_DEPLOY_KEY }}
       - name: Install lint-kit
         run: |
-          npm install --prefix "$RUNNER_TEMP/lint-kit" --install-strategy=nested --no-save --no-package-lock "git+ssh://git@github.com/Logos52/lint-kit.git#1d43fe29e463756e41e17feaf795e269823a1bbe"
+          npm install --prefix "$RUNNER_TEMP/lint-kit" --install-strategy=nested --no-save --no-package-lock "git+ssh://git@github.com/Logos52/lint-kit.git#6d1dd21036f9517ff28f3e3a2a631039ffcb9416"
           npm --prefix "$RUNNER_TEMP/lint-kit/node_modules/lint-kit" run build
           python -m pip install -r "$RUNNER_TEMP/lint-kit/node_modules/lint-kit/requirements.txt"
       - name: Check

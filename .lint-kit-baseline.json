@@ -1,11 +1,6 @@
 {
   "entries": [
     {
-      "rule": "R10",
-      "file": ".github/workflows/lint-kit.yml",
-      "fingerprint": "790f4270"
-    },
-    {
       "rule": "R16",
       "file": "AGENTS.md",
       "fingerprint": "53f51cb0"
@@ -94,11 +89,6 @@
       "rule": "R4",
       "file": "render.py",
       "fingerprint": "4a2f8ef9"
-    },
-    {
-      "rule": "R8",
-      "file": "rules.json",
-      "fingerprint": "10f94bb4"
     }
   ]
 }
