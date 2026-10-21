@@ -5,7 +5,7 @@ The only nondeterministic stage. P1 uses the offline stub brain (no API key).
 Computes: net worth, the flex number, the pay-down goal, spending-by-category,
 the follow-the-line series (cumulative spend vs ideal pace), recent txns, narrative.
 """
-import json, os, calendar
+import json, os, calendar, sys
 from collections import defaultdict
 import brain
 
@@ -110,7 +110,7 @@ out = {"schema_version": 1, "display_month": disp,
 json.dump(out, open(f"{HERE}/insights.json", "w"), indent=1)
 
 tops = ", ".join(f"{c['category']}:${c['cents']/100:,.0f}" for c in spending_by_category[:6])
-print(f"display_month={disp}  net=${(assets-debts)/100:,.2f}  flex=${flex/100:,.2f}  "
-      f"spent=${spent/100:,.2f}  ({status} ${abs(final_delta)/100:,.2f})")
-print("top categories:", tops)
-print(f"needs_review={needs_review}/{len(reviewable)}   paydown={paydown}")
+sys.stdout.write(f"display_month={disp}  net=${(assets-debts)/100:,.2f}  flex=${flex/100:,.2f}  "
+                 f"spent=${spent/100:,.2f}  ({status} ${abs(final_delta)/100:,.2f})\n")
+sys.stdout.write(f"top categories: {tops}\n")
+sys.stdout.write(f"needs_review={needs_review}/{len(reviewable)}   paydown={paydown}\n")
