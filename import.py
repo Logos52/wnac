@@ -48,6 +48,6 @@ data = {"schema_version": 1,
 json.dump(data, open(OUT, "w"), indent=1)
 con.close()
 
-print(f"wrote {OUT}: {len(accounts)} accounts, {len(txns)} transactions")
+sys.stdout.write(f"wrote {OUT}: {len(accounts)} accounts, {len(txns)} transactions\n")
 for a in accounts:
-    print(f"  {a['name']:18} ${a['balance_cents']/100:>10,.2f}")
+    sys.stdout.write(f"  {a['name']:18} ${a['balance_cents']/100:>10,.2f}\n")
