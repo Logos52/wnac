@@ -6,6 +6,8 @@ Minimal contract. The ecosystem-level rules in `../AGENTS.md` apply (project dis
 
 Method public, money private. No real balances, transactions, or account details ever leave this repo or appear in screenshots. Public-facing renders use fake data only.
 
+Comments inside an embedded page script are comments. Delete them without changing what the page does. Prove that with a diff of the built page, and cover that behavior with tests.
+
 ## Writing style
 
 Decision documents (PRDs, proposals, decision notes, memos) follow High-Signal Decision Writing. The canonical copy is `../llm-knowledge-base/02 - System/Writing Standards.md`. The digest is in `../AGENTS.md`. The standard asks for a verdict first, measured claims, a steelman of the rejected option, a price on your own recommendation, and falsifiable success criteria.

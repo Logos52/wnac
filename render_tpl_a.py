@@ -28,7 +28,7 @@ const GREEN='#00BB36',AMBER='#ED8001',RED='#F3241A';
 const h2r=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
 const r2h=a=>'#'+a.map(x=>Math.max(0,Math.min(255,Math.round(x))).toString(16).padStart(2,'0')).join('');
 const mix=(a,b,t)=>{const x=h2r(a),y=h2r(b);return r2h(x.map((v,i)=>v+(y[i]-v)*t));};
-function paceColor(over){ // over = (cum-ideal)/scale ; >0 over budget
+function paceColor(over){
   if(over<=0) return GREEN;
   if(over<=0.5) return mix(GREEN,AMBER,over/0.5);
   return mix(AMBER,RED,Math.min(1,(over-0.5)/0.5));
@@ -36,7 +36,6 @@ function paceColor(over){ // over = (cum-ideal)/scale ; >0 over budget
 function card(title,link){const c=el('div','card');const hd=el('div','chead');
   hd.appendChild(el('h2',null,title)); if(link){const a=el('a','link',link+' \\u203a');a.href='#';hd.appendChild(a);} c.appendChild(hd); return c;}
 
-/* ---------- sidebar ---------- */
 function sidebar(){const s=el('div','sidebar');
   s.appendChild(el('div','logo','\\u27a4 WNAC'));
   s.appendChild(el('div','search','\\u26b2  Search'));
@@ -54,7 +53,6 @@ function sidebar(){const s=el('div','sidebar');
   const f=el('div','foot');['Explore','Get help','Settings'].forEach(n=>{const a=el('a','',n);a.href='#';a.style.color=cssv('--text-secondary');a.style.padding='8px 10px';a.style.textDecoration='none';f.appendChild(a);});
   s.appendChild(f); return s;}
 
-/* ---------- ring/dial ---------- */
 function ring(pct,color,label,sub){const sz=140,r=58,c=2*Math.PI*r;const off=c*(1-pct);
   const w=el('div','dialwrap');
   w.innerHTML=`<svg width="${sz}" height="${sz}" viewBox="0 0 ${sz} ${sz}">
@@ -65,20 +63,16 @@ function ring(pct,color,label,sub){const sz=140,r=58,c=2*Math.PI*r;const off=c*(
     <text x="70" y="88" text-anchor="middle" fill="${cssv('--text-secondary')}" font-size="12">${sub}</text></svg>`;
   return w;}
 
-/* ---------- follow-the-line ---------- */
 function followLine(){const c=card('Monthly spending','Transactions');
   const pts=INS.monthly_line.points; const W=560,H=200,pad=14;
   const maxV=Math.max(...pts.map(p=>Math.max(p.cum,p.ideal)),1);
   const X=i=>pad+(W-2*pad)*i/(pts.length-1); const Y=v=>H-pad-(H-2*pad)*v/maxV;
-  // Copilot's exact rule (help.copilot.money/.../dashboard-line-colors):
-  //   ideal = budget * day/daysInMonth (the dashed line) ; below it = under pace.
-  //   green: spent<ideal ; red: spent>=budget ; else diff=(spent-ideal)/budget: <20pts light-orange, >=20pts dark-orange
   const budget=INS.budget.flex_cents||1;
   const LO=cssv('--pace-slight'), DO=cssv('--pace-over');
   const lineColor=(cum,ideal)=>{
-    if(cum < ideal) return GREEN;                              // below the dashed line = under pace
-    if(cum >= budget) return (cum/budget < 1.25) ? DO : RED;   // over budget: amber-orange until 25% over, then red (our softening of Copilot's hard red)
-    return ((cum-ideal)/budget) < 0.20 ? LO : DO;              // over pace, under budget -> light/dark orange
+    if(cum < ideal) return GREEN;
+    if(cum >= budget) return (cum/budget < 1.25) ? DO : RED;
+    return ((cum-ideal)/budget) < 0.20 ? LO : DO;
   };
   let segs='';
   for(let i=1;i<pts.length;i++){const a=pts[i-1],b=pts[i];
@@ -102,7 +96,6 @@ function followLine(){const c=card('Monthly spending','Transactions');
     <circle cx="${X(pts.length-1)}" cy="${Y(last.cum)}" r="6" fill="${cssv('--surface-card')}" stroke="${endColor}" stroke-width="3"/></svg>`;
   c.appendChild(svgwrap); return c;}
 
-/* ---------- top categories ---------- */
 function categories(){const c=card('Top categories','Categories');
   const list=INS.spending_by_category.filter(x=>x.category!=='Uncategorized');
   const max=Math.max(...list.map(x=>x.cents),1);
@@ -118,7 +111,6 @@ function categories(){const c=card('Top categories','Categories');
     r.innerHTML=`<span class="muted">\\u26a0 ${money(unc.cents)} uncategorized</span><span class="amt"><span class="badge" style="background:var(--chip-blue-bg);color:var(--chip-blue-fg)">${INS.needs_review} to review</span></span>`;
     c.appendChild(r);} return c;}
 
-/* ---------- recent ---------- */
 function recent(){const c=card('Transactions to review','View all');
   INS.recent.forEach(t=>{const r=el('div','row');
     const av=el('span',null,(t.payee||'?').slice(0,1).toUpperCase());

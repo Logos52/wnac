@@ -3,9 +3,7 @@ PART = """    else {const ch=el('span','chip','review');ch.style.color=cssv('--t
     const a=el('span','amt',money(t.amount_cents));if(t.amount_cents>0)a.style.color=cssv('--pace-under');r.appendChild(a);
     c.appendChild(r);}); return c;}
 
-/* ---------- hero ---------- */
 function hero(){const h=el('div','hero');
-  // net worth
   const nw=card('Net worth','Accounts');const n=INS.net_worth;
   nw.appendChild(el('div','big',money(n.net_cents)));
   const sb=el('div','sub');sb.innerHTML=`<span style="color:${cssv('--accent-bright')}">\\u25cf Assets ${money(n.assets_cents)}</span> &nbsp; <span style="color:${cssv('--debt-coral')}">\\u25cf Debts ${money(n.debts_cents)}</span>`;
@@ -13,7 +11,6 @@ function hero(){const h=el('div','hero');
   const lines=el('div');lines.style.marginTop='18px';
   lines.innerHTML=`<svg viewBox="0 0 300 60" width="100%"><line x1="6" y1="20" x2="280" y2="20" stroke="${cssv('--accent-bright')}" stroke-width="3"/><circle cx="288" cy="20" r="6" fill="none" stroke="${cssv('--accent-bright')}" stroke-width="3"/><line x1="6" y1="44" x2="200" y2="44" stroke="${cssv('--debt-coral')}" stroke-width="3"/><circle cx="208" cy="44" r="6" fill="none" stroke="${cssv('--debt-coral')}" stroke-width="3"/></svg>`;
   nw.appendChild(lines);h.appendChild(nw);
-  // flex
   const fx=card('Flex this month',null);const b=INS.budget;
   const over=b.spent_cents>b.flex_cents; const fcolor=over?cssv('--pace-budget'):cssv('--pace-under');
   fx.appendChild(el('div','big',money(b.flex_cents)));
@@ -23,7 +20,6 @@ function hero(){const h=el('div','hero');
   meter.innerHTML=`<div class="bar" style="height:10px"><span style="width:${pct}%;background:${fcolor}"></span></div>
     <div class="sub" style="margin-top:8px">${money(b.spent_cents)} spent \\u00b7 <span style="color:${fcolor}">${money(Math.abs(b.final_delta_cents))} ${b.status}</span></div>`;
   fx.appendChild(meter);h.appendChild(fx);
-  // paydown dial
   const pd=card('Debt pay-down',null);const p=INS.paydown;
   const months=p.monthly_cents?Math.ceil(p.current_cents/p.monthly_cents):null;
   pd.appendChild(ring(p.progress, cssv('--debt-coral'), Math.round(p.progress*100)+'%', money(p.current_cents)+' left'));
@@ -31,7 +27,6 @@ function hero(){const h=el('div','hero');
   pd.lastChild.style.textAlign='center';pd.lastChild.style.marginTop='8px';
   h.appendChild(pd); return h;}
 
-/* ---------- insight ---------- */
 function insight(){const c=el('div','card');
   const hd=el('div','chead');hd.appendChild(el('h2',null,'Your money, today'));
   const lk=el('a','link','Open journal &rsaquo;');lk.href='#';lk.onclick=ev=>{ev.preventDefault();showView('journal');};hd.appendChild(lk);
@@ -42,7 +37,6 @@ function insight(){const c=el('div','card');
     const ch=el('span','chip',t);ch.style.color=cssv(col);ch.style.background=cssv('--surface-card-alt');chips.appendChild(ch);});
   c.appendChild(chips);return c;}
 
-/* ---------- mount ---------- */
 function topbarEl(t,sub){const e=el('div','topbar');e.innerHTML='<h1>'+esc(t)+'</h1>'+(sub?'<span class="stamp">'+esc(sub)+'</span>':'');return e;}
 function avatarEl(p){const av=el('span',null,(p||'?').slice(0,1).toUpperCase());av.style.cssText='width:30px;height:30px;border-radius:50%;background:var(--surface-card-alt);display:flex;align-items:center;justify-content:center;font-weight:600;color:var(--text-secondary);font-size:13px;flex:0 0 30px';return av;}
 function txView(){const v=el('div','view');v.id='view-transactions';v.style.display='none';
