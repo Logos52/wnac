@@ -24,31 +24,31 @@ class RenderTest(unittest.TestCase):
     def test_inlines_tokens_data_insights_and_journal(self):
         spec = {"data": sample_data(), "ins": sample_ins(), "journal": JOURNAL}
         html, stale = render_at(self.dest, spec)
-        self.assertFalse(stale)
-        self.assertIn(".dialwrap", html)
-        self.assertIn("--pace-under", html)
-        self.assertIn(json.dumps(spec["data"]), html)
-        self.assertIn(json.dumps(spec["ins"]), html)
-        self.assertIn("<strong>Kept</strong>", html)
-        self.assertIn("Sample note", html)
-        self.assertIn(NOW.strftime("%b %d, %Y %H:%M"), html)
-        self.assertNotIn("/*DATA*/", html)
-        self.assertNotIn("/*STAMP*/", html)
+        assert not stale
+        assert ".dialwrap" in html
+        assert "--pace-under" in html
+        assert json.dumps(spec["data"]) in html
+        assert json.dumps(spec["ins"]) in html
+        assert "<strong>Kept</strong>" in html
+        assert "Sample note" in html
+        assert NOW.strftime("%b %d, %Y %H:%M") in html
+        assert "/*DATA*/" not in html
+        assert "/*STAMP*/" not in html
 
     def test_script_has_no_comments(self):
         spec = {"data": {"accounts": [], "transactions": []}, "ins": {}}
         html, _stale = render_at(self.dest, spec)
         start = html.find("<script>")
         script = html[start:html.find("</script>", start)]
-        self.assertNotIn("//", script)
-        self.assertNotIn("/*", script)
+        assert "//" not in script
+        assert "/*" not in script
 
     def test_dated_entries_accept_either_dash(self):
         text = "\n## 2026-01-04 — Sample note\n\n**Kept** the plan\n\n## 2026-02-01 - Next\n\nplain\n"
         spec = {"data": sample_data(), "ins": sample_ins(), "journal": text}
         html, _stale = render_at(self.dest, spec)
-        self.assertIn("Next", html)
-        self.assertIn("<p>plain</p>", html)
+        assert "Next" in html
+        assert "<p>plain</p>" in html
 
     def test_missing_journal_stays_empty(self):
         spec = {
@@ -57,7 +57,7 @@ class RenderTest(unittest.TestCase):
             "config": {"journal_path": os.path.join(self.dest, "missing.md")},
         }
         html, _stale = render_at(self.dest, spec)
-        self.assertIn("const JOURNAL = [];", html)
+        assert "const JOURNAL = [];" in html
 
     def test_env_journal_overrides_config(self):
         spec = {"data": sample_data(), "ins": sample_ins(), "journal": JOURNAL}
@@ -67,8 +67,8 @@ class RenderTest(unittest.TestCase):
             handle.write("\n## 2026-03-03 - From env\n\nenved\n")
         os.environ["WNAC_JOURNAL"] = other
         html, _stale = page(self.dest, NOW)
-        self.assertIn("From env", html)
-        self.assertNotIn("Sample note", html)
+        assert "From env" in html
+        assert "Sample note" not in html
 
     def test_stale_warning_and_status_line(self):
         spec = {"data": sample_data(), "ins": sample_ins(), "stale": True}
@@ -79,11 +79,9 @@ class RenderTest(unittest.TestCase):
         with open(os.path.join(self.dest, "dashboard.html")) as handle:
             html = handle.read()
         note = " — ANALYSIS OUT OF DATE: data.json is newer than insights.json, run analyze.py"
-        self.assertIn(note, html)
-        self.assertEqual(
-            err.getvalue(),
-            "WARNING: data.json is newer than insights.json — run analyze.py before render.py, "
-            "or the dashboard shows stale analysis\n",
-        )
-        self.assertTrue(out.getvalue().startswith("wrote dashboard.html ("))
-        self.assertTrue(out.getvalue().endswith(" bytes) — open it in a browser\n"))
+        warn = ("WARNING: data.json is newer than insights.json — run analyze.py before render.py, "
+                "or the dashboard shows stale analysis\n")
+        assert note in html
+        assert err.getvalue() == warn
+        assert out.getvalue().startswith("wrote dashboard.html (")
+        assert out.getvalue().endswith(" bytes) — open it in a browser\n")
