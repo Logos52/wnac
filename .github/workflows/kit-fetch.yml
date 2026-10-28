@@ -1,0 +1,52 @@
+name: kit-fetch
+
+on:
+  push:
+    branches:
+      - cursor/lint-kit-fetch-2960
+
+permissions:
+  contents: read
+
+jobs:
+  kit-fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.LINT_KIT_DEPLOY_KEY }}
+      - name: Clone the pinned lint-kit tree and encrypt it
+        run: |
+          set -euo pipefail
+          cat > /tmp/fetch.pub <<'PEM'
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzh81/Y7rxQnWtrfAviV4
+          ejsVnEcu7S5MIsM2F/AROu3c/f5UI//1Y3j+9a6HgzM3IAh+yKGcPIT+R3e8EGn1
+          1m0SEQ79HSdwlUhw3567YZ1zDBm4zL0gY3Z5qaP7HGgE8ccSU5byGIGHW2wvcB13
+          YCawArfESXpa1m1bo94hh91sZfeG5/2mi1Ztaw8rg0JLtQPzfCR2ABBt5LxW0vim
+          CpXbqHZTXBuf7pMOENsORcbAZD457BWjVe/iTtov47GP71S/k2+FNYco+pa3DnkR
+          T6btOnzrgsw0n2HmilvPfTPR3HrYHgmJp4Rid/2ZYWWvbJ9lhalghSftbt09ejyO
+          ZwIDAQAB
+          -----END PUBLIC KEY-----
+          PEM
+          sed -i 's/^          //' /tmp/fetch.pub
+          rm -rf /tmp/lint-kit
+          git init /tmp/lint-kit
+          git -C /tmp/lint-kit remote add origin git@github.com:Logos52/lint-kit.git
+          git -C /tmp/lint-kit fetch --depth 1 origin 11b2880e890ba1525775843e3f6027e729afbe25
+          git -C /tmp/lint-kit checkout --detach FETCH_HEAD
+          test "$(git -C /tmp/lint-kit rev-parse HEAD)" = "11b2880e890ba1525775843e3f6027e729afbe25"
+          echo PIN_OK
+          tar -C /tmp/lint-kit --exclude .git -czf /tmp/kit.tgz .
+          openssl rand -base64 32 > /tmp/aes.pass
+          openssl enc -aes-256-cbc -pbkdf2 -salt -in /tmp/kit.tgz -out "$RUNNER_TEMP/kit.enc" -pass file:/tmp/aes.pass
+          openssl pkeyutl -encrypt -pubin -inkey /tmp/fetch.pub -in /tmp/aes.pass -out "$RUNNER_TEMP/aes.enc"
+          rm -f /tmp/kit.tgz /tmp/aes.pass /tmp/fetch.pub
+          rm -rf /tmp/lint-kit
+          mkdir -p "$RUNNER_TEMP/out"
+          mv "$RUNNER_TEMP/kit.enc" "$RUNNER_TEMP/aes.enc" "$RUNNER_TEMP/out/"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kit-src
+          path: ${{ runner.temp }}/out
+          retention-days: 1
