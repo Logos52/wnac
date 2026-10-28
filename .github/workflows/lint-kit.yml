@@ -30,6 +30,9 @@ jobs:
         run: |
           mkdir -p node_modules/.bin
           ln -sfn "$RUNNER_TEMP/lint-kit/node_modules/.bin/kit" node_modules/.bin/kit
+          if [ -n "${GITHUB_BASE_REF:-}" ]; then
+            git fetch --depth 1 origin "$GITHUB_BASE_REF"
+          fi
           set +e
           set -o pipefail
           npx kit check | tee "$RUNNER_TEMP/kit-check.txt"
